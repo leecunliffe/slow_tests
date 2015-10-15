@@ -5,7 +5,7 @@ Plugin for python's nose http://nose.readthedocs.org/ that prints your slowest t
 
 To install:
 
-`pip install -e git+https://github.com/yellow-beard/slow_tests.git#egg=slow_tests`
+`pip install slowtests`
 
 Then you can run your tests like this:
 
