@@ -13,5 +13,5 @@ Then you can run your tests like this:
 
 And at the end of the test run, you'll see some pretty output with test times and names so you can identify your slow tests and speed them up :)
 
-
+![Alt text](/screenshot.png?raw=true "Screenshot")
 
