@@ -1,8 +1,3 @@
-# to install:
-# $ python tests/plugins/setup.py install
-# then you can:
-# $ nosetests -sx --with-slowtests
-
 from collections import defaultdict
 from nose.plugins import Plugin
 import time
