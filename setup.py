@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(name='SlowTests',
       entry_points={
           'nose.plugins.0.10': [
-              'slowtests= slow_tests:SlowTests'
+              'slowtests=slow_tests:SlowTests'
           ]
       },
       packages=find_packages(),
