@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(name='SlowTests',
       entry_points={
@@ -6,6 +6,10 @@ setup(name='SlowTests',
               'slowtests= slow_tests:SlowTests'
           ]
       },
+      packages=find_packages(),
+      install_requires=['nose'],
+      version="0.0.2",
+      license="MIT License",
       author="Yellowbeard",
       author_email="artbasher@gmail.com",
       url="https://github.com/yellow-beard/slow_tests",
