@@ -9,5 +9,6 @@ setup(name='SlowTests',
       author="Yellowbeard",
       author_email="artbasher@gmail.com",
       url="https://github.com/yellow-beard/slow_tests",
+      description="Plugin for noset that identifies and prints your slowest tests"
       )
 
