@@ -32,14 +32,19 @@ class SlowTests(Plugin):
 
     def afterTest(self, test):
         self._test_times[get_name(test)]['end'] = time.time()
-
+    
     def finalize(self, result):
         times = [(k, v['end'] - v['start'],) for k, v in self._test_times.iteritems()]
         times.sort(key=lambda item: item[1], reverse=True)
         total_time = reduce(lambda memo, row: row[1] + memo, times, 0)
         num_tests = len(times)
         avg_time = total_time/float(num_tests)
-        median_time = times[num_tests/2][1]
+        if num_tests % 2 == 0:
+            t1 = times[num_tests/2][1]
+            t2 = times[(num_tests/2)-1][1]
+            median_time = (t1 + t2)/2.0
+        else:
+            median_time = times[num_tests/2][1]
         print "\n"
         print "Total Time:  {total}s".format(total=round(total_time, 3))
         print "Mean Time:   {avg}s".format(avg=round(avg_time, 3))
